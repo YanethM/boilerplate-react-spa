@@ -1,0 +1,29 @@
+/* Footer.scss */
+
+.footer {
+  background-color: rgba(223, 171, 122, 0.63);
+  color: #000000;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  align-items: flex-start;
+  height: 150px;
+  bottom: -60px;
+  position: absolute;
+  width: 100%;
+  .footer__info {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    p{
+      margin: 0;
+    }
+  }
+}
