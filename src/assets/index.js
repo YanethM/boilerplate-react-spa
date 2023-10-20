@@ -7,6 +7,10 @@ import fondo2 from "./images/jpg/2.jpg";
 import fondo3 from "./images/jpg/3.jpg";
 import fondo4 from "./images/jpg/4.jpg";
 import fondo5 from "./images/jpg/5.jpg";
+import whatsApp from "./images/svg/whatsapp-icon.svg";
+import linkedin from "./images/svg/linkedin.svg";
+import location from "./images/svg/location.svg";
+import email from "./images/svg/mail-icon.svg";
 
 const image = {
   logoColor,
@@ -18,6 +22,10 @@ const image = {
   fondo3,
   fondo4,
   fondo5,
+  whatsApp,
+  linkedin,
+  location,
+  email,
 };
 
 export { image };

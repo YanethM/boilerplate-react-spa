@@ -1,0 +1,117 @@
+@import "~font-awesome/css/font-awesome.min.css";
+
+.active {
+  background-color: #1d4ed8;
+}
+
+nav {
+  align-items: center;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+nav .title {
+  font-size: 1.5rem;
+  margin: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  background-color: #5f9ea054;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 40px;
+  border-radius: 10px;
+  padding: 5px;
+  align-items: center;
+  margin: 0;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 10px;
+  font-size: 12px;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding-right: 10px;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+
+nav ul li a:not(.active):hover {
+  background-color: #172554;
+}
+
+.navbar-items__right {
+  display: flex;
+  align-items: center;
+}
+.navbar-items__left {
+  padding: 10px;
+  font-size: 12px;
+}
+nav .menu {
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+
+nav .menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+
+@media (max-width: 480px) {
+  nav .menu {
+    display: flex;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    margin: 0.2rem 0.5rem;
+  }
+}

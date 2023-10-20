@@ -1,117 +1,183 @@
-@import "~font-awesome/css/font-awesome.min.css";
-
-.active {
-  background-color: #1d4ed8;
-}
-
-nav {
-  align-items: center;
-  height: 60px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-}
-
-nav .title {
-  font-size: 1.5rem;
-  margin: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-}
-
-nav ul {
-  display: flex;
-  background-color: #5f9ea054;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  height: 40px;
-  border-radius: 10px;
-  padding: 5px;
-  align-items: center;
-  margin: 0;
-}
-
-nav ul li {
-  list-style: none;
-  padding: 10px;
-  font-size: 12px;
-}
-
-nav ul li a {
-  display: block;
-  text-decoration: none;
-  color: white;
-  padding-right: 10px;
-  margin: 0 0.5rem;
-  border-radius: 0.5rem;
-}
-
-nav ul li a:not(.active):hover {
-  background-color: #172554;
-}
-
-.navbar-items__right {
-  display: flex;
-  align-items: center;
-}
-.navbar-items__left {
-  padding: 10px;
-  font-size: 12px;
-}
-nav .menu {
-  display: none;
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 2.25rem;
-  height: 2rem;
-}
-
-nav .menu span {
-  height: 0.4rem;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 0.2rem;
-}
-
-@media (max-width: 480px) {
-  nav .menu {
+.webmenu-page {
+  .header {
     display: flex;
-  }
-
-  nav {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    width: 100%;
     flex-direction: column;
+    flex-wrap: wrap;
+    .topbarMenu {
+      width: 100%;
+      height: 35px;
+      display: flex;
+      background-color: #717171;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      align-content: center;
+      .social-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        img {
+          width: 20px;
+          margin: 5px;
+        }
+      }
+      .search-bar {
+        right: 10px;
+        position: absolute;
+        width: 30%;
+        .search-input {
+          padding: 5px;
+          margin-right: 10px;
+          background-color: rgb(255 255 255 / 88%);
+          border: none;
+          border-radius: 4px;
+          font-size: 14px;
+          width: 100%;
+          border: 1px solid #bbb9b940;
+        }
+
+        .search-button {
+          background-color: #859bb333;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          padding: 8px 12px;
+          cursor: pointer;
+        }
+      }
+    }
+    .menuBar {
+      display: flex;
+      align-items: center;
+      background-color: rgb(46 42 42 / 73%);
+      color: white;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      /* align-content: center; */
+      justify-content: center;
+
+      .logo {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 45px;
+          left: 25px;
+          position: relative;
+          margin: 10px;
+        }
+      }
+
+      .navbar {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: center;
+        width: 100%;
+        left: 20px;
+        position: relative;
+        .navbar-toggle {
+          font-size: 24px;
+          right: 25px;
+          position: absolute;
+          cursor: pointer;
+          margin-right: 10px;
+        }
+
+        .navbar-options {
+          a {
+            width: 90px;
+            text-transform: uppercase;
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+          }
+        }
+        .navbar-options a:hover {
+          background-color: #000000;
+          font-weight: 600;
+          height: 50px;
+        }
+      }
+    }
+  }
+  .home {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .navbar.open .navbar-options {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
     align-items: flex-start;
+    background-color: rgb(38 36 36 / 95%);
+    padding: 10px;
+    z-index: 99999;
+    position: absolute;
+    top: 25px;
+    padding: 10px;
+    a {
+      margin: 5px;
+    }
   }
-
-  nav ul {
+  .navbar:not(.open) .navbar-options {
     display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 0.25rem;
   }
-
-  nav ul.open {
+  .webmenu-page .header .menuBar .navbar .navbar-options a {
+    width: 100%;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 11px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-bottom: 1px solid #90909036;
+    padding: 5px;
+    &:hover {
+      background-color: #000000;
+    }
+  }
+  .navbar-options a:hover {
+    background-color: #000000;
+    font-weight: 600;
   }
 
-  nav ul li {
-    width: 100%;
-    text-align: center;
+  .navbar-toggle {
+    display: block; /* Muestra el ícono de la hamburguesa en dispositivos móviles */
+  }
+}
+
+/* Estilos para dispositivos de escritorio y tabletas */
+@media (min-width: 769px) {
+  .navbar-toggle {
+    display: none; /* Oculta el ícono de la hamburguesa en dispositivos de escritorio y tabletas */
   }
 
-  nav ul li a {
-    margin: 0.2rem 0.5rem;
+  .navbar-options {
+    display: flex;
   }
 }
